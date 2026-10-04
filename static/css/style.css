@@ -1,0 +1,605 @@
+/* ========================================
+   PORTAFOLIO ARACELLI OSORIO
+   UX/UI + FULL STACK PYTHON
+   ======================================== */
+
+
+/* ========================================
+   VARIABLES DE COLOR
+   ======================================== */
+
+:root {
+    --color-cream: #FFF8F6;
+    --color-orange: #FF5733;
+    --color-purple: #7B2FFF;
+    --color-purple-dark: #4A0EBF;
+    --color-deep: #1A0050;
+
+    --color-white: #FFFFFF;
+    --color-text: #1A0050;
+    --color-muted: #625878;
+
+    --color-border: #E6DDF2;
+}
+
+
+/* ========================================
+   RESET GENERAL
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-cream);
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   SELECCIÓN DE TEXTO
+   ======================================== */
+
+::selection {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+}
+
+
+/* ========================================
+   NAVBAR
+   ======================================== */
+
+.navbar {
+    background-color: var(--color-cream);
+    border-bottom: 1px solid var(--color-border);
+    padding: 1.2rem 0;
+}
+
+.navbar-brand {
+    color: var(--color-deep);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.navbar-brand:hover {
+    color: var(--color-purple);
+}
+
+.nav-link {
+    color: var(--color-deep);
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-orange);
+}
+
+
+/* ========================================
+   HERO
+   ======================================== */
+
+.hero {
+    background-color: var(--color-cream);
+}
+
+.hero .container {
+    position: relative;
+}
+
+.eyebrow {
+    color: var(--color-orange);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    max-width: 950px;
+    color: var(--color-deep);
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--color-purple);
+}
+
+.hero-text {
+    max-width: 680px;
+    margin-top: 2rem;
+    color: var(--color-muted);
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+
+/* ========================================
+   BOTONES
+   ======================================== */
+
+.btn {
+    border-radius: 50px;
+    padding: 0.85rem 1.7rem;
+    font-weight: 700;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Botón naranja */
+
+.btn-dark {
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+    color: var(--color-white);
+}
+
+.btn-dark:hover {
+    background-color: var(--color-purple-dark);
+    border-color: var(--color-purple-dark);
+    color: var(--color-white);
+}
+
+
+/* Botón outline */
+
+.btn-outline-dark {
+    border: 2px solid var(--color-deep);
+    color: var(--color-deep);
+    background-color: transparent;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--color-purple);
+    border-color: var(--color-purple);
+    color: var(--color-white);
+}
+
+
+/* ========================================
+   SECCIONES
+   ======================================== */
+
+.section {
+    padding: 7rem 0;
+    background-color: var(--color-white);
+}
+
+.section-light {
+    background-color: var(--color-cream);
+}
+
+.section-label {
+    color: var(--color-orange);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 2rem;
+}
+
+.section h2 {
+    max-width: 850px;
+    color: var(--color-deep);
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    margin-bottom: 2rem;
+}
+
+.section p {
+    color: var(--color-muted);
+    font-size: 1.05rem;
+}
+
+
+/* ========================================
+   SOBRE MÍ
+   ======================================== */
+
+#sobre-mi {
+    position: relative;
+}
+
+#sobre-mi::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 8px;
+    margin-top: 3rem;
+    background-color: var(--color-orange);
+    border-radius: 20px;
+}
+
+
+/* ========================================
+   HABILIDADES
+   ======================================== */
+
+.skill-card {
+    position: relative;
+    height: 100%;
+    padding: 2.5rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-purple);
+    box-shadow: 0 20px 45px rgba(74, 14, 191, 0.12);
+}
+
+.skill-card h3 {
+    color: var(--color-deep);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.skill-card p {
+    margin-bottom: 0;
+}
+
+
+/* Línea decorativa de las tarjetas */
+
+.skill-card::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 6px;
+    margin-bottom: 2rem;
+    background-color: var(--color-orange);
+    border-radius: 10px;
+}
+
+.skill-card:nth-child(2)::before {
+    background-color: var(--color-purple);
+}
+
+.skill-card:nth-child(3)::before {
+    background-color: var(--color-purple-dark);
+}
+
+
+/* ========================================
+   PROYECTOS
+   ======================================== */
+
+.project-card {
+    position: relative;
+    height: 100%;
+    min-height: 330px;
+    padding: 2.5rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-purple);
+    box-shadow: 0 20px 50px rgba(74, 14, 191, 0.13);
+}
+
+
+/* Número */
+
+.project-number {
+    display: inline-block;
+    color: var(--color-orange);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 3rem;
+}
+
+
+/* Título */
+
+.project-card h3 {
+    color: var(--color-deep);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+}
+
+
+/* Descripción */
+
+.project-card p {
+    max-width: 550px;
+    color: var(--color-muted);
+}
+
+
+/* Tags */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-tags span {
+    padding: 0.4rem 0.8rem;
+    background-color: var(--color-cream);
+    color: var(--color-purple-dark);
+    border: 1px solid var(--color-border);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+
+/* Colores decorativos por proyecto */
+
+.project-card:nth-child(1)::after {
+    background-color: var(--color-orange);
+}
+
+.project-card:nth-child(2)::after {
+    background-color: var(--color-purple);
+}
+
+.project-card:nth-child(3)::after {
+    background-color: var(--color-purple-dark);
+}
+
+.project-card:nth-child(4)::after {
+    background-color: var(--color-orange);
+}
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 100%;
+}
+
+
+/* ========================================
+   CONTACTO
+   ======================================== */
+
+.contact-section {
+    padding: 8rem 0;
+    background-color: var(--color-deep);
+    color: var(--color-white);
+}
+
+.contact-section .section-label {
+    color: var(--color-orange);
+}
+
+.contact-section h2 {
+    max-width: 850px;
+    color: var(--color-white);
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.06em;
+    margin-bottom: 2rem;
+}
+
+.contact-section p {
+    max-width: 600px;
+    color: #D4CBE5;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Botón contacto */
+
+.contact-section .btn-light {
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+    color: var(--color-white);
+}
+
+.contact-section .btn-light:hover {
+    background-color: var(--color-purple);
+    border-color: var(--color-purple);
+    color: var(--color-white);
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    padding: 2rem 0;
+    background-color: var(--color-deep);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer p {
+    margin: 0;
+    color: #AFA4C4;
+    font-size: 0.85rem;
+}
+
+
+/* ========================================
+   NAVBAR RESPONSIVE
+   ======================================== */
+
+.navbar-toggler {
+    border: 2px solid var(--color-deep);
+    border-radius: 10px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(123, 47, 255, 0.2);
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) saturate(100%);
+}
+
+
+/* ========================================
+   RESPONSIVE TABLET
+   ======================================== */
+
+@media (max-width: 991px) {
+
+    .nav-link {
+        margin-left: 0;
+        padding: 0.7rem 0 !important;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+
+    .section {
+        padding: 5rem 0;
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVE MOBILE
+   ======================================== */
+
+@media (max-width: 576px) {
+
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        text-align: center;
+    }
+
+    .section {
+        padding: 4.5rem 0;
+    }
+
+    .section h2 {
+        font-size: 2.7rem;
+    }
+
+    .skill-card {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .project-card {
+        min-height: auto;
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-section {
+        padding: 5rem 0;
+    }
+
+    .contact-section h2 {
+        font-size: 3.3rem;
+    }
+
+}
+
+
+/* ========================================
+   ANIMACIÓN SUAVE
+   ======================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero .eyebrow {
+    animation: fadeUp 0.7s ease forwards;
+}
+
+.hero h1 {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.hero-text {
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero-buttons {
+    animation: fadeUp 1.1s ease forwards;
+}
