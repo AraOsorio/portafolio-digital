@@ -1,0 +1,335 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema de Arriendo de Inmuebles | Aracelli Osorio</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
+</head>
+
+<body>
+
+    <!-- VOLVER AL PORTAFOLIO -->
+    <nav class="project-nav">
+        <div class="container">
+            <a href="{% url 'inicio' %}">
+                ← Volver al portafolio
+            </a>
+        </div>
+    </nav>
+
+
+<!-- HERO DEL PROYECTO -->
+<header class="project-hero">
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- IMAGEN -->
+              <div class="col-lg-6 order-1 order-lg-2">
+
+              <div class="project-cover">
+
+                  <img
+                   src="{% static 'img/sistemadearriendo.png' %}"
+                   alt="Sistema de Arriendo de Inmuebles"
+               >
+
+        </div>
+
+    </div>
+
+
+            <!-- INFORMACIÓN -->
+            <div class="col-lg-6 order-2 order-lg-1">
+
+                <span class="project-eyebrow">
+                    Proyecto seleccionado · 01
+                </span>
+
+                <h1>
+                    Sistema de Arriendo
+                    <span>de Inmuebles</span>
+                </h1>
+
+                <p class="project-intro">
+                    Aplicación web desarrollada para gestionar y consultar
+                    propiedades de manera clara y organizada.
+                </p>
+
+
+                <!-- BOTONES -->
+                <div class="project-actions project-actions-top">
+
+                    <a
+                        href="https://sistema-de-arriendo-de-inmuebles.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-dark"
+                    >
+                        Ver proyecto →
+                    </a>
+
+                    <a
+                        href="https://github.com/AraOsorio/Sistema-de-arriendo-de-inmuebles/tree/main"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                    >
+                        Ver código en GitHub →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- INFORMACIÓN DEL PROYECTO -->
+        <div class="project-meta project-meta-bottom">
+
+            <div>
+                <span>Rol</span>
+                <strong>UX/UI + Desarrollo</strong>
+            </div>
+
+            <div>
+                <span>Stack</span>
+                <strong>Python · Django · PostgreSQL</strong>
+            </div>
+
+            <div>
+                <span>Tipo</span>
+                <strong>Aplicación web</strong>
+            </div>
+
+        </div>
+
+    </div>
+</header>
+
+
+    <!-- CONTEXTO -->
+    <main>
+
+        <section class="project-section">
+            <div class="container">
+
+                <div class="project-section-label">
+                    01 — Contexto
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8">
+
+                        <h2>
+                            Una aplicación para
+                            <span>gestionar inmuebles.</span>
+                        </h2>
+
+                        <p>
+                            Este proyecto consiste en una aplicación web
+                            orientada a la gestión y consulta de propiedades
+                            disponibles para arriendo.
+                        </p>
+
+                        <p>
+                            El proyecto fue desarrollado como parte de mi
+                            formación Full Stack, integrando diseño de
+                            interfaces, desarrollo web y manejo de bases
+                            de datos.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- OBJETIVO -->
+        <section class="project-section project-section-alt">
+            <div class="container">
+
+                <div class="project-section-label">
+                    02 — Objetivo
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-7">
+
+                        <h2>
+                            Diseñar y desarrollar una experiencia
+                            <span>clara y funcional.</span>
+                        </h2>
+
+                        <p>
+                            El objetivo fue construir una aplicación que
+                            permitiera organizar la información de los
+                            inmuebles y facilitar su consulta mediante
+                            una interfaz sencilla.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PROCESO -->
+        <section class="project-section">
+            <div class="container">
+
+                <div class="project-section-label">
+                    03 — Proceso
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <article class="process-card">
+                            <span>01</span>
+                            <h3>Diseño</h3>
+                            <p>
+                                Definición de estructura, interfaz y
+                                experiencia de usuario.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="process-card">
+                            <span>02</span>
+                            <h3>Desarrollo</h3>
+                            <p>
+                                Implementación de la aplicación utilizando
+                                Django y Python.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="process-card">
+                            <span>03</span>
+                            <h3>Base de datos</h3>
+                            <p>
+                                Organización y gestión de la información
+                                mediante PostgreSQL.
+                            </p>
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- TECNOLOGÍAS -->
+        <section class="project-section project-section-alt">
+            <div class="container">
+
+                <div class="project-section-label">
+                    04 — Tecnologías
+                </div>
+
+                <div class="technology-list">
+
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>PostgreSQL</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Bootstrap</span>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- RESULTADO -->
+        <section class="project-section">
+            <div class="container">
+
+                <div class="project-section-label">
+                    05 — Resultado
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-8">
+
+                        <h2>
+                            Un proyecto que conecta
+                            <span>diseño y desarrollo.</span>
+                        </h2>
+
+                        <p>
+                            El proyecto permitió integrar conocimientos
+                            de diseño UX/UI y desarrollo Full Stack,
+                            construyendo una aplicación web funcional
+                            conectada a una base de datos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="project-actions">
+
+                    <a
+                        href="https://sistema-de-arriendo-de-inmuebles.vercel.app/"
+                        target="_blank"
+                        class="btn btn-dark"
+                    >
+                        Ver proyecto
+                    </a>
+
+                    <a
+                        href="https://github.com/AraOsorio/Sistema-de-arriendo-de-inmuebles"
+                        target="_blank"
+                        class="btn btn-outline-dark"
+                    >
+                        Ver código en GitHub
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="project-footer">
+        <div class="container">
+
+            <p>
+                Aracelli Osorio · UX/UI Designer + Full Stack Python
+            </p>
+
+            <a href="{% url 'inicio' %}">
+                ← Volver al portafolio
+            </a>
+
+        </div>
+    </footer>
+
+
+</body>
+</html>

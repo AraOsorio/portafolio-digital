@@ -22,8 +22,8 @@
         rel="stylesheet"
     >
 
-    <!-- Nuestro CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!--CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=3">
 </head>
 
 <body>
@@ -147,12 +147,12 @@
             <div class="col-lg-8">
 
                 <h2 class="about-title">
-                   <span class="about-main-title">
-                      Diseño + tecnología
+                    <span class="about-main-title">
+                        Diseño + tecnología
                     </span>
 
                     <span class="about-highlight">
-                       para crear productos digitales con propósito.
+                        para crear productos digitales con propósito.
                     </span>
                 </h2>
 
@@ -173,11 +173,16 @@
 
             </div>
 
-
             <!-- PERFIL -->
             <div class="col-lg-4">
 
                 <div class="about-profile">
+
+                    <img
+                        src="{% static 'img/aracelli.jpg' %}"
+                        alt="Aracelli Osorio"
+                        class="about-photo"
+                    >
 
                     <div class="about-profile-item">
                         <span>Perfil</span>
@@ -204,7 +209,6 @@
             </div>
 
         </div>
-
     </div>
 </section>
 
@@ -333,102 +337,152 @@
 </section>
 
     <!-- PROYECTOS -->
-    <section id="proyectos" class="section">
-        <div class="container">
+<section id="proyectos" class="section">
+    <div class="container">
 
-            <div class="section-label">
-                03 — Proyectos
-            </div>
+        <div class="section-label">
+            03 — Proyectos
+        </div>
 
-            <h2>Proyectos seleccionados</h2>
+        <h2>Proyecto seleccionado</h2>
 
-            <div class="row g-4 mt-3">
+        <div class="row g-4 mt-3">
 
-                <div class="col-lg-6">
-                    <article class="project-card">
-                        <span class="project-number">01</span>
+            <!-- =====================================
+                 PROYECTO 01 — SISTEMA DE ARRIENDO
+                 ===================================== -->
 
-                        <h3>Sistema de Arriendo de Inmuebles</h3>
+            <div class="col-lg-6">
 
-                        <p>
-                            Aplicación web desarrollada con Django y
-                            PostgreSQL para gestionar y consultar
-                            propiedades.
-                        </p>
+                <article class="project-card">
 
-                        <div class="project-tags">
-                            <span>Django</span>
-                            <span>Python</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                    </article>
-                </div>
+                    <span class="project-number">01</span>
 
+                    <h3>
+                        Sistema de Arriendo de Inmuebles
+                    </h3>
 
-                <div class="col-lg-6">
-                    <article class="project-card">
-                        <span class="project-number">02</span>
+                    <p>
+                        Aplicación web desarrollada con Django y
+                        PostgreSQL para gestionar y consultar
+                        propiedades.
+                    </p>
 
-                        <h3>Parcela Inteligente</h3>
+                    <div class="project-tags">
+                        <span>Django</span>
+                        <span>Python</span>
+                        <span>PostgreSQL</span>
+                    </div>
 
-                        <p>
-                            Concepto de aplicación móvil orientada a
-                            facilitar la gestión de terrenos y construcción
-                            de parcelas en Chile.
-                        </p>
+                    <a
+                        href="{% url 'proyecto_arriendo' %}"
+                        class="project-link"
+                    >
+                        Ver proyecto →
+                    </a>
 
-                        <div class="project-tags">
-                            <span>UX/UI</span>
-                            <span>Research</span>
-                            <span>Product Design</span>
-                        </div>
-                    </article>
-                </div>
-
-
-                <div class="col-lg-6">
-                    <article class="project-card">
-                        <span class="project-number">03</span>
-
-                        <h3>OnlyFlans</h3>
-
-                        <p>
-                            Proyecto web desarrollado durante mi formación
-                            Full Stack.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>Django</span>
-                        </div>
-                    </article>
-                </div>
-
-
-                <div class="col-lg-6">
-                    <article class="project-card">
-                        <span class="project-number">04</span>
-
-                        <h3>Viajes Chile</h3>
-
-                        <p>
-                            Proyecto frontend enfocado en estructura,
-                            diseño responsive y componentes web.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>Bootstrap</span>
-                        </div>
-                    </article>
-                </div>
+                </article>
 
             </div>
+
+
+            <!-- =====================================
+                 PROYECTO 02 — PARCELA INTELIGENTE
+                 GUARDADO PARA FUTURO
+                 =====================================
+
+            <div class="col-lg-6">
+
+                <article class="project-card">
+
+                    <span class="project-number">02</span>
+
+                    <h3>Parcela Inteligente</h3>
+
+                    <p>
+                        Concepto de aplicación móvil orientada a
+                        facilitar la gestión de terrenos y construcción
+                        de parcelas en Chile.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>UX/UI</span>
+                        <span>Research</span>
+                        <span>Product Design</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+            -->
+
+
+            <!-- =====================================
+                 PROYECTO 03 — ONLYFLANS
+                 GUARDADO PARA FUTURO
+                 =====================================
+
+            <div class="col-lg-6">
+
+                <article class="project-card">
+
+                    <span class="project-number">03</span>
+
+                    <h3>OnlyFlans</h3>
+
+                    <p>
+                        Proyecto web desarrollado durante mi formación
+                        Full Stack.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Django</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+            -->
+
+
+            <!-- =====================================
+                 PROYECTO 04 — VIAJES CHILE
+                 GUARDADO PARA FUTURO
+                 =====================================
+
+            <div class="col-lg-6">
+
+                <article class="project-card">
+
+                    <span class="project-number">04</span>
+
+                    <h3>Viajes Chile</h3>
+
+                    <p>
+                        Proyecto frontend enfocado en estructura,
+                        diseño responsive y componentes web.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Bootstrap</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+            -->
 
         </div>
-    </section>
+
+    </div>
+</section>
 
 
     <!-- CONTACTO -->
