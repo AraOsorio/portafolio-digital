@@ -24,7 +24,7 @@
 
 
 /* ========================================
-   RESET GENERAL
+   RESET
    ======================================== */
 
 * {
@@ -44,11 +44,6 @@ body {
     line-height: 1.7;
 }
 
-
-/* ========================================
-   SELECCIÓN DE TEXTO
-   ======================================== */
-
 ::selection {
     background-color: var(--color-orange);
     color: var(--color-white);
@@ -62,7 +57,7 @@ body {
 .navbar {
     background-color: var(--color-cream);
     border-bottom: 1px solid var(--color-border);
-    padding: 1.2rem 0;
+    padding: 1rem 0;
 }
 
 .navbar-brand {
@@ -99,24 +94,36 @@ body {
 
 .hero .container {
     position: relative;
+    max-width: 1400px;
 }
+
+.hero-content {
+    min-height: 570px;
+    padding: 4rem 0;
+}
+
+
+/* Texto superior */
 
 .eyebrow {
     color: var(--color-orange);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
+
+/* Título principal */
+
 .hero h1 {
-    max-width: 950px;
+    max-width: 900px;
     color: var(--color-deep);
-    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-size: clamp(2.8rem, 4.5vw, 4.6rem);
     font-weight: 700;
-    line-height: 0.98;
-    letter-spacing: -0.06em;
+    line-height: 1;
+    letter-spacing: -0.055em;
 }
 
 .hero h1 span {
@@ -124,19 +131,114 @@ body {
     color: var(--color-purple);
 }
 
+
+/* Texto descriptivo */
+
 .hero-text {
-    max-width: 680px;
-    margin-top: 2rem;
+    max-width: 620px;
+    margin-top: 1.6rem;
     color: var(--color-muted);
-    font-size: 1.15rem;
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
+
+
+/* Botones */
 
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: 0.9rem;
+    margin-top: 1.8rem;
+}
+
+
+/* ========================================
+   HERO — ELEMENTO VISUAL
+   ======================================== */
+
+.hero-visual {
+    position: relative;
+    width: 100%;
+    height: 360px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Tarjeta */
+
+.hero-card {
+    position: relative;
+    z-index: 3;
+
+    width: 210px;
+    height: 260px;
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--color-purple);
+    color: var(--color-white);
+
+    border-radius: 30px;
+
+    transform: rotate(5deg);
+
+    box-shadow: 18px 18px 0 var(--color-orange);
+}
+
+.hero-card span {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.08em;
+}
+
+.hero-card p {
+    margin: 0;
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.08em;
+}
+
+
+/* Círculos */
+
+.hero-shape {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hero-shape-one {
+    width: 170px;
+    height: 170px;
+
+    background-color: var(--color-orange);
+
+    top: 15px;
+    right: 20px;
+
+    z-index: 1;
+}
+
+.hero-shape-two {
+    width: 100px;
+    height: 100px;
+
+    background-color: var(--color-purple-dark);
+
+    bottom: 20px;
+    left: 30px;
+
+    z-index: 1;
 }
 
 
@@ -146,8 +248,9 @@ body {
 
 .btn {
     border-radius: 50px;
-    padding: 0.85rem 1.7rem;
+    padding: 0.75rem 1.6rem;
     font-weight: 700;
+
     transition:
         transform 0.2s ease,
         background-color 0.2s ease,
@@ -159,7 +262,7 @@ body {
 }
 
 
-/* Botón naranja */
+/* Botón principal */
 
 .btn-dark {
     background-color: var(--color-orange);
@@ -174,7 +277,7 @@ body {
 }
 
 
-/* Botón outline */
+/* Botón secundario */
 
 .btn-outline-dark {
     border: 2px solid var(--color-deep);
@@ -194,7 +297,7 @@ body {
    ======================================== */
 
 .section {
-    padding: 7rem 0;
+    padding: 6rem 0;
     background-color: var(--color-white);
 }
 
@@ -204,21 +307,21 @@ body {
 
 .section-label {
     color: var(--color-orange);
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
 }
 
 .section h2 {
     max-width: 850px;
     color: var(--color-deep);
-    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    font-size: clamp(2.3rem, 5vw, 4.2rem);
     font-weight: 700;
     line-height: 1.05;
     letter-spacing: -0.05em;
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
 }
 
 .section p {
@@ -237,68 +340,17 @@ body {
 
 #sobre-mi::after {
     content: "";
+
     display: block;
-    width: 90px;
-    height: 8px;
-    margin-top: 3rem;
+
+    width: 80px;
+    height: 7px;
+
+    margin-top: 2.5rem;
+
     background-color: var(--color-orange);
+
     border-radius: 20px;
-}
-
-
-/* ========================================
-   HABILIDADES
-   ======================================== */
-
-.skill-card {
-    position: relative;
-    height: 100%;
-    padding: 2.5rem;
-    background-color: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: 24px;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--color-purple);
-    box-shadow: 0 20px 45px rgba(74, 14, 191, 0.12);
-}
-
-.skill-card h3 {
-    color: var(--color-deep);
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.skill-card p {
-    margin-bottom: 0;
-}
-
-
-/* Línea decorativa de las tarjetas */
-
-.skill-card::before {
-    content: "";
-    display: block;
-    width: 45px;
-    height: 6px;
-    margin-bottom: 2rem;
-    background-color: var(--color-orange);
-    border-radius: 10px;
-}
-
-.skill-card:nth-child(2)::before {
-    background-color: var(--color-purple);
-}
-
-.skill-card:nth-child(3)::before {
-    background-color: var(--color-purple-dark);
 }
 
 
@@ -308,13 +360,20 @@ body {
 
 .project-card {
     position: relative;
+
     height: 100%;
-    min-height: 330px;
-    padding: 2.5rem;
+    min-height: 320px;
+
+    padding: 2.4rem;
+
     background-color: var(--color-white);
+
     border: 1px solid var(--color-border);
-    border-radius: 24px;
+
+    border-radius: 22px;
+
     overflow: hidden;
+
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease,
@@ -322,9 +381,12 @@ body {
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-7px);
+
     border-color: var(--color-purple);
-    box-shadow: 0 20px 50px rgba(74, 14, 191, 0.13);
+
+    box-shadow:
+        0 20px 50px rgba(74, 14, 191, 0.13);
 }
 
 
@@ -332,11 +394,15 @@ body {
 
 .project-number {
     display: inline-block;
+
     color: var(--color-orange);
-    font-size: 0.8rem;
+
+    font-size: 0.78rem;
     font-weight: 700;
+
     letter-spacing: 0.1em;
-    margin-bottom: 3rem;
+
+    margin-bottom: 2.5rem;
 }
 
 
@@ -344,9 +410,12 @@ body {
 
 .project-card h3 {
     color: var(--color-deep);
-    font-size: 1.8rem;
+
+    font-size: 1.75rem;
     font-weight: 700;
+
     letter-spacing: -0.03em;
+
     margin-bottom: 1rem;
 }
 
@@ -364,24 +433,41 @@ body {
 .project-tags {
     display: flex;
     flex-wrap: wrap;
+
     gap: 0.5rem;
+
     margin-top: 1.5rem;
 }
 
 .project-tags span {
-    padding: 0.4rem 0.8rem;
+    padding: 0.35rem 0.75rem;
+
     background-color: var(--color-cream);
+
     color: var(--color-purple-dark);
+
     border: 1px solid var(--color-border);
+
     border-radius: 50px;
-    font-size: 0.75rem;
+
+    font-size: 0.73rem;
     font-weight: 700;
 }
 
 
-/* Colores decorativos por proyecto */
+/* Barra lateral */
 
-.project-card:nth-child(1)::after {
+.project-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 7px;
+    height: 100%;
+
     background-color: var(--color-orange);
 }
 
@@ -397,13 +483,39 @@ body {
     background-color: var(--color-orange);
 }
 
-.project-card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 8px;
-    height: 100%;
+
+/* ========================================
+   ENLACES DE PROYECTOS
+   ======================================== */
+
+.project-link {
+    display: inline-block;
+
+    margin-top: 1.8rem;
+
+    color: var(--color-deep);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    border-bottom: 2px solid var(--color-orange);
+
+    padding-bottom: 3px;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-link:hover {
+    color: var(--color-orange);
+
+    border-color: var(--color-purple);
+
+    transform: translateX(5px);
 }
 
 
@@ -412,8 +524,10 @@ body {
    ======================================== */
 
 .contact-section {
-    padding: 8rem 0;
+    padding: 7rem 0;
+
     background-color: var(--color-deep);
+
     color: var(--color-white);
 }
 
@@ -423,18 +537,27 @@ body {
 
 .contact-section h2 {
     max-width: 850px;
+
     color: var(--color-white);
-    font-size: clamp(3rem, 7vw, 6rem);
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
     font-weight: 700;
+
     line-height: 1;
+
     letter-spacing: -0.06em;
-    margin-bottom: 2rem;
+
+    margin-bottom: 1.8rem;
 }
 
 .contact-section p {
     max-width: 600px;
+
     color: #D4CBE5;
-    font-size: 1.1rem;
+
+    font-size: 1.05rem;
+
     margin-bottom: 2rem;
 }
 
@@ -443,13 +566,17 @@ body {
 
 .contact-section .btn-light {
     background-color: var(--color-orange);
+
     border-color: var(--color-orange);
+
     color: var(--color-white);
 }
 
 .contact-section .btn-light:hover {
     background-color: var(--color-purple);
+
     border-color: var(--color-purple);
+
     color: var(--color-white);
 }
 
@@ -460,28 +587,34 @@ body {
 
 .footer {
     padding: 2rem 0;
+
     background-color: var(--color-deep);
+
     border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer p {
     margin: 0;
+
     color: #AFA4C4;
+
     font-size: 0.85rem;
 }
 
 
 /* ========================================
-   NAVBAR RESPONSIVE
+   NAVBAR MOBILE
    ======================================== */
 
 .navbar-toggler {
     border: 2px solid var(--color-deep);
+
     border-radius: 10px;
 }
 
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 3px rgba(123, 47, 255, 0.2);
+    box-shadow:
+        0 0 0 3px rgba(123, 47, 255, 0.2);
 }
 
 .navbar-toggler-icon {
@@ -490,7 +623,42 @@ body {
 
 
 /* ========================================
-   RESPONSIVE TABLET
+   ANIMACIONES
+   ======================================== */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.hero .eyebrow {
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.hero h1 {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.hero-text {
+    animation: fadeUp 0.95s ease forwards;
+}
+
+.hero-buttons {
+    animation: fadeUp 1.05s ease forwards;
+}
+
+
+/* ========================================
+   RESPONSIVE — TABLET
    ======================================== */
 
 @media (max-width: 991px) {
@@ -500,8 +668,21 @@ body {
         padding: 0.7rem 0 !important;
     }
 
+    .hero-content {
+        min-height: auto;
+        padding: 4rem 0;
+    }
+
     .hero h1 {
-        font-size: clamp(3rem, 12vw, 5rem);
+        max-width: 850px;
+
+        font-size:
+            clamp(3rem, 8vw, 4.8rem);
+    }
+
+    .hero-visual {
+        height: 300px;
+        margin-top: 2rem;
     }
 
     .section {
@@ -512,7 +693,7 @@ body {
 
 
 /* ========================================
-   RESPONSIVE MOBILE
+   RESPONSIVE — MOBILE
    ======================================== */
 
 @media (max-width: 576px) {
@@ -521,8 +702,20 @@ body {
         padding: 1rem 0;
     }
 
+    .hero-content {
+        min-height: auto;
+
+        padding:
+            4rem 0
+            4.5rem;
+    }
+
     .hero h1 {
-        font-size: 3.2rem;
+        max-width: 100%;
+
+        font-size: 3rem;
+
+        line-height: 1.02;
     }
 
     .hero-text {
@@ -531,11 +724,42 @@ body {
 
     .hero-buttons {
         flex-direction: column;
+
         align-items: stretch;
     }
 
     .hero-buttons .btn {
         text-align: center;
+    }
+
+    .hero-visual {
+        height: 270px;
+        margin-top: 2rem;
+    }
+
+    .hero-card {
+        width: 180px;
+        height: 220px;
+
+        padding: 1.6rem;
+    }
+
+    .hero-card span {
+        font-size: 2.5rem;
+    }
+
+    .hero-card p {
+        font-size: 0.9rem;
+    }
+
+    .hero-shape-one {
+        width: 140px;
+        height: 140px;
+    }
+
+    .hero-shape-two {
+        width: 85px;
+        height: 85px;
     }
 
     .section {
@@ -548,12 +772,15 @@ body {
 
     .skill-card {
         padding: 2rem;
+
         border-radius: 20px;
     }
 
     .project-card {
         min-height: auto;
+
         padding: 2rem;
+
         border-radius: 20px;
     }
 
@@ -571,35 +798,227 @@ body {
 
 }
 
-
 /* ========================================
-   ANIMACIÓN SUAVE
+   SOBRE MÍ — PERFIL
    ======================================== */
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+.about-title {
+    max-width: 950px;
+    margin-bottom: 2rem;
+    color: var(--color-deep);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.about-main-title {
+    display: block;
+    font-size: clamp(3.2rem, 6vw, 5.5rem);
+    font-weight: 800;
+}
+
+.about-highlight {
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--color-purple);
+    font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+    font-weight: 700;
+}
+
+.about-text {
+    max-width: 900px;
+    margin-bottom: 1.4rem;
+}
+
+
+/* TARJETA DE PERFIL */
+
+.about-profile {
+    padding: 1.8rem;
+    background-color: var(--color-cream);
+    border: 1px solid var(--color-border);
+    border-radius: 22px;
+}
+
+.about-profile-item {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.about-profile-item:first-child {
+    padding-top: 0;
+}
+
+.about-profile-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.about-profile-item span {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--color-orange);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.about-profile-item strong {
+    color: var(--color-deep);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* ========================================
+   SOBRE MÍ — MOBILE
+   ======================================== */
+
+@media (max-width: 991px) {
+
+    .about-profile {
+        margin-top: 1rem;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+}
+
+/* ========================================
+   HABILIDADES — CARDS
+   ======================================== */
+
+.skill-card {
+    height: 100%;
+    min-height: 430px;
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(26, 0, 80, 0.10);
+}
+
+
+/* COLORES */
+
+.skill-card-main {
+    background-color: #F4F0FF;
+}
+
+.skill-card-code {
+    background-color: #FFF1EC;
+}
+
+.skill-card-tools {
+    background-color: #F2F7F5;
+}
+
+
+/* CABECERA */
+
+.skill-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 3.5rem;
+}
+
+.skill-number {
+    color: var(--color-deep);
+
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.skill-tag {
+    padding: 0.4rem 0.7rem;
+
+    border: 1px solid var(--color-deep);
+    border-radius: 50px;
+
+    color: var(--color-deep);
+
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+
+/* TÍTULO */
+
+.skill-card h3 {
+    margin-bottom: 1rem;
+
+    color: var(--color-deep);
+
+    font-size: 1.8rem;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.skill-card h3 span {
+    display: block;
+    color: var(--color-purple);
+}
+
+
+/* DESCRIPCIÓN */
+
+.skill-card p {
+    margin-bottom: 2rem;
+
+    color: var(--color-muted);
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* TECNOLOGÍAS */
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+
+    margin-top: auto;
+}
+
+.skill-list span {
+    padding: 0.45rem 0.7rem;
+
+    background-color: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-radius: 50px;
+
+    color: var(--color-deep);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 576px) {
+
+    .skill-card {
+        min-height: 380px;
+        padding: 1.5rem;
     }
-}
 
-.hero .eyebrow {
-    animation: fadeUp 0.7s ease forwards;
-}
-
-.hero h1 {
-    animation: fadeUp 0.8s ease forwards;
-}
-
-.hero-text {
-    animation: fadeUp 1s ease forwards;
-}
-
-.hero-buttons {
-    animation: fadeUp 1.1s ease forwards;
 }
