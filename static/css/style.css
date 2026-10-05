@@ -601,6 +601,50 @@ body {
     font-size: 0.85rem;
 }
 
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: -2rem;
+}
+
+.footer-social a {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+    text-decoration: none;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+
+    font-size: 1.5rem;
+
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--color-deep);
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+
+    transform: translateY(-3px);
+}
+
+@media (max-width: 576px) {
+
+    .footer-social {
+        justify-content: flex-start;
+        margin-top: 1.2rem;
+    }
+
+}
+
 
 /* ========================================
    NAVBAR MOBILE
